@@ -7,33 +7,33 @@
 //
 
 #include <stdio.h>
-#include "hashtable.h"
+#include "heap.h"
 
-int main(){
+int main() {
     
-    int command = 1;
-    HashTable table = create_hashtable(11);
-    int buffer;
+    Heap heap = new_heap(9);
+
+    heap_insert(&heap, 0, 21);
+    heap_insert(&heap, 1, 13);
+    heap_insert(&heap, 2, 3);
+    heap_insert(&heap, 3, 1);
+    heap_insert(&heap, 4, 9);
+    heap_insert(&heap, 5, 11);
+    heap_insert(&heap, 6, 8);
+    heap_insert(&heap, 7, 7);
+    heap_insert(&heap, 8, 5);
     
-    while (command) {
-        scanf("%d", &command);
-        switch (command) {
-            case 1:
-                printf("Enter some data to add: ");
-                scanf("%d", &buffer);
-                hash_insert(&table, buffer);
-                break;
-            case 2:
-                printf("Enter some data to remove: ");
-                scanf("%d", &buffer);
-                hash_remove(&table, buffer);
-                break;
-            case 3:
-                hash_print(&table);
-                break;
-        }
-        printf("\n");
-    }
-    hash_destroy(&table);
+    print_heap(&heap);
+    
+    max_heap_sort(&heap);
+    
+    print_heap(&heap);
+
+    printf("%d->", max_heap_delete(&heap));
+    printf("%d->", max_heap_delete(&heap));
+    printf("%d\n", max_heap_delete(&heap));
+
+    print_heap(&heap);
+
+    return 0;
 }
-

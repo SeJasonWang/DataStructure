@@ -12,7 +12,7 @@
 HashTable create_hashtable(int n) {
     HashTable newtable;
     
-    newtable.table = malloc(sizeof(newtable) * n);
+    newtable.table = malloc(sizeof *(newtable.table) * n);
     for (int i = 0; i < n; i++) {
         newtable.table[i].head = NULL;
     }
@@ -21,12 +21,12 @@ HashTable create_hashtable(int n) {
 }
 
 void hash_insert(HashTable *self, int data) {
-    int i = data%self->size;
+    int i = data % self->size;
     insert_at_front(&(self->table[i]), data);
 }
 
 void hash_remove(HashTable *self, int data) {
-    int i = data%self->size;
+    int i = data % self->size;
     delete_list(&self->table[i], data);
 }
 

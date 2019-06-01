@@ -13,6 +13,7 @@
 		96B96B2D22A21E8700FBC6B8 /* bst.c in Sources */ = {isa = PBXBuildFile; fileRef = 96B96B2C22A21E8700FBC6B8 /* bst.c */; };
 		96B96B3122A2375200FBC6B8 /* avl.c in Sources */ = {isa = PBXBuildFile; fileRef = 96B96B3022A2375200FBC6B8 /* avl.c */; };
 		96B96B3522A2590300FBC6B8 /* hashtable.c in Sources */ = {isa = PBXBuildFile; fileRef = 96B96B3422A2590300FBC6B8 /* hashtable.c */; };
+		96B96B3922A2787400FBC6B8 /* heap.c in Sources */ = {isa = PBXBuildFile; fileRef = 96B96B3822A2787400FBC6B8 /* heap.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,8 @@
 		96B96B3022A2375200FBC6B8 /* avl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = avl.c; sourceTree = "<group>"; };
 		96B96B3322A2590300FBC6B8 /* hashtable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hashtable.h; sourceTree = "<group>"; };
 		96B96B3422A2590300FBC6B8 /* hashtable.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = hashtable.c; sourceTree = "<group>"; };
+		96B96B3722A2787400FBC6B8 /* heap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = heap.h; sourceTree = "<group>"; };
+		96B96B3822A2787400FBC6B8 /* heap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = heap.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				96B96B1522A1F83C00FBC6B8 /* main.c */,
+				96B96B3622A2786500FBC6B8 /* Heap */,
 				96B96B3222A2589E00FBC6B8 /* HashTable */,
 				96B96B2E22A2374800FBC6B8 /* AVLTree */,
 				96B96B2A22A21E7900FBC6B8 /* BinarySearchTree */,
@@ -125,6 +129,15 @@
 				96B96B3422A2590300FBC6B8 /* hashtable.c */,
 			);
 			path = HashTable;
+			sourceTree = "<group>";
+		};
+		96B96B3622A2786500FBC6B8 /* Heap */ = {
+			isa = PBXGroup;
+			children = (
+				96B96B3722A2787400FBC6B8 /* heap.h */,
+				96B96B3822A2787400FBC6B8 /* heap.c */,
+			);
+			path = Heap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +199,7 @@
 				96B96B1622A1F83C00FBC6B8 /* main.c in Sources */,
 				96B96B2922A1FBFD00FBC6B8 /* bigo.c in Sources */,
 				96B96B3522A2590300FBC6B8 /* hashtable.c in Sources */,
+				96B96B3922A2787400FBC6B8 /* heap.c in Sources */,
 				96B96B3122A2375200FBC6B8 /* avl.c in Sources */,
 				96B96B2022A1F8C800FBC6B8 /* list.c in Sources */,
 				96B96B2D22A21E8700FBC6B8 /* bst.c in Sources */,
