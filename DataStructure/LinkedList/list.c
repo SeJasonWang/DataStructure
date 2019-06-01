@@ -7,11 +7,41 @@
 //
 
 #include "list.h"
+#include <stdlib.h>
 
 List new_list() {
     List temp;
     temp.head = NULL;
     return temp;
+}
+
+void insert_at_front(List *self, int data) {
+    ListNodePtr new_node = malloc(sizeof *new_node);
+    new_node->data = data;
+    new_node->next = self->head;
+    self->head = new_node;
+}
+
+void insert_in_order(List *self, int data) {
+    ListNodePtr current = self->head;
+    ListNodePtr prev = NULL;
+    
+    ListNodePtr new_node = malloc(sizeof *new_node);
+    new_node->data = data;
+    new_node->next = NULL;
+    
+    while (current != NULL && current->data < data) {
+        prev = current;
+        current = current->next;
+    }
+    
+    if (current == self->head) { // at front
+        new_node->next = current;
+        self->head = new_node;
+    } else {                     // middle
+        new_node->next = current;
+        prev->next = new_node;
+    }
 }
 
 void reverse_list(List *self) {
@@ -44,43 +74,16 @@ void merge_list(List *self, List *addition) {
     printf("merged successfully:%d \n", addition->head->data);
 }
 
-
 void print_list(List *self) {
     ListNodePtr current = self->head;
     while (current != NULL) {
-        printf("%d \n", current->data);
+        printf("%d", current->data);
         current = current->next;
+        if (current != NULL) {
+            printf("->");
+        }
     }
     printf("\n");
-}
-
-void insert_at_front(List *self, int data) {
-    ListNodePtr new_node = malloc(sizeof *new_node);
-    new_node->data = data;
-    new_node->next = self->head;
-    self->head = new_node;
-}
-
-void insert_in_order(List *self, int data) {
-    ListNodePtr current = self->head;
-    ListNodePtr prev = NULL;
-    
-    ListNodePtr new_node = malloc(sizeof *new_node);
-    new_node->data = data;
-    new_node->next = NULL;
-    
-    while (current != NULL && current->data < data) {
-        prev = current;
-        current = current->next;
-    }
-    
-    if (current == self->head) { // at front
-        new_node->next = current;
-        self->head = new_node;
-    } else {                     // middle
-        new_node->next = current;
-        prev->next = new_node;
-    }
 }
 
 void delete_list(List *self, int data) {

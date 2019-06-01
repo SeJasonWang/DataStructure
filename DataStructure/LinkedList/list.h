@@ -10,7 +10,6 @@
 #define list_h
 
 #include <stdio.h>
-#include <stdlib.h>
 
 typedef struct listNode {
     int data;
@@ -22,11 +21,15 @@ typedef struct list {
 } List;
 
 List new_list(void);
-void reverse_list(List *self);
-void merge_list(List *self, List *addition);
-void print_list(List *self);
+
 void insert_at_front(List *self, int data);
 void inset_in_order(List *self, int data);
+
+void reverse_list(List *self);
+void merge_list(List *self, List *addition);
+
+void print_list(List *self);
+
 void delete_list(List *self, int data);
 void destroy_list(List *self);
 
