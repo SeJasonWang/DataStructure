@@ -7,54 +7,61 @@
 //
 
 #include <stdio.h>
-#include <time.h>
-#include "bigo.h"
+#include "bst.h"
+
+void print_height(BST *self) {
+    printf("height: %d\n", height_bst(self));
+}
+
+void insert(BST *self) {
+    printf("Enter some data to add: ");
+    int data;
+    scanf("%d", &data);
+    insert_bst(self, data);
+}
+
+void delete(BST *self) {
+    printf("Enter some data to delete: ");
+    int data;
+    scanf("%d", &data);
+    delete_bst(self, data);
+}
+
+void print(BST *self) {
+    print_pre_order_bst(self);
+    printf("\n");
+    print_in_order_bst(self);
+    printf("\n");
+    print_post_order_bst(self);
+    printf("\n");
+}
 
 int main(int argc, const char * argv[]) {
     
+    printf("Week4!\n");
+    
+    BST tree = new_bst();
     int quit = 0;
-    while (!quit) {
-        int option;
+    int option;
+    
+    while (quit == 0) {
         scanf("%d", &option);
-        
-        if (option == 0) {
-            quit = 1;
-        } else {
-            long n;
-            printf("Enter a value for n\n");
-            scanf("%ld", &n);
-            clock_t start = clock();
-            
-            switch (option) {
-                case 1:
-                    f1(n);
-                    break;
-                case 2:
-                    f2(n);
-                    break;
-                case 3:
-                    f3(n);
-                    break;
-                case 4:
-                    f4(n);
-                    break;
-                case 5:
-                    f5(n);
-                    break;
-                case 6:
-                    f6(n);
-                    break;
-                case 7:
-                    f7(n);
-                    break;
-                case 8:
-                    f8(n);
-                    break;
-            }
-            
-            clock_t diff = clock() - start;
-            long msec = diff * 1000 / CLOCKS_PER_SEC;
-            printf("Operation took %ld milliseconds\n\n", msec);
+        switch (option) {
+            case 0:
+                quit = 1;
+                break;
+            case 1:
+                insert(&tree);
+                break;
+            case 2:
+                delete(&tree);
+                break;
+            case 3:
+                print(&tree);
+                break;
+            case 4:
+                print_height(&tree);
+                break;
         }
     }
     

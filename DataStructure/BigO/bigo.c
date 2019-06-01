@@ -36,7 +36,7 @@ void f2(long n) {
 /*
  *  𝑇(𝑛) = 𝑎𝑇(𝑛/𝑏) + 𝑓(𝑛)
  *  (1). If 𝑓(𝑛) grows slower than 𝑛^log_𝑏⁡𝑎  then 𝑇(𝑛) = Θ(𝑛^log_𝑏⁡𝑎)
- *  (2). If 𝑓(𝑛) grows about the same as 𝑛^log_𝑏⁡𝑎   then 𝑇(𝑛) = Θ(𝑛^log_𝑏⁡𝑎ln⁡𝑛 )
+ *  (2). If 𝑓(𝑛) grows about the same as 𝑛^log_𝑏⁡𝑎   then 𝑇(𝑛) = Θ(𝑛^log_𝑏⁡𝑎ln⁡𝑛)
  *  (3). If 𝑓(𝑛) grows faster than 𝑛^log_𝑏⁡𝑎  then 𝑇(𝑛) = Θ(𝑓(𝑛))
  */
 void f3(long n) {

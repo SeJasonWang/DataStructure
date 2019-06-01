@@ -10,6 +10,7 @@
 		96B96B1622A1F83C00FBC6B8 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 96B96B1522A1F83C00FBC6B8 /* main.c */; };
 		96B96B2022A1F8C800FBC6B8 /* list.c in Sources */ = {isa = PBXBuildFile; fileRef = 96B96B1F22A1F8C800FBC6B8 /* list.c */; };
 		96B96B2922A1FBFD00FBC6B8 /* bigo.c in Sources */ = {isa = PBXBuildFile; fileRef = 96B96B2822A1FBFD00FBC6B8 /* bigo.c */; };
+		96B96B2D22A21E8700FBC6B8 /* bst.c in Sources */ = {isa = PBXBuildFile; fileRef = 96B96B2C22A21E8700FBC6B8 /* bst.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		96B96B1F22A1F8C800FBC6B8 /* list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = list.c; sourceTree = "<group>"; };
 		96B96B2722A1FBFD00FBC6B8 /* bigo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bigo.h; sourceTree = "<group>"; };
 		96B96B2822A1FBFD00FBC6B8 /* bigo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bigo.c; sourceTree = "<group>"; };
+		96B96B2B22A21E8700FBC6B8 /* bst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bst.h; sourceTree = "<group>"; };
+		96B96B2C22A21E8700FBC6B8 /* bst.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bst.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				96B96B1522A1F83C00FBC6B8 /* main.c */,
+				96B96B2A22A21E7900FBC6B8 /* BinarySearchTree */,
 				96B96B2122A1FBA700FBC6B8 /* BigO */,
 				96B96B1D22A1F8BF00FBC6B8 /* LinkedList */,
 			);
@@ -86,6 +90,15 @@
 				96B96B2822A1FBFD00FBC6B8 /* bigo.c */,
 			);
 			path = BigO;
+			sourceTree = "<group>";
+		};
+		96B96B2A22A21E7900FBC6B8 /* BinarySearchTree */ = {
+			isa = PBXGroup;
+			children = (
+				96B96B2B22A21E8700FBC6B8 /* bst.h */,
+				96B96B2C22A21E8700FBC6B8 /* bst.c */,
+			);
+			path = BinarySearchTree;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +160,7 @@
 				96B96B1622A1F83C00FBC6B8 /* main.c in Sources */,
 				96B96B2922A1FBFD00FBC6B8 /* bigo.c in Sources */,
 				96B96B2022A1F8C800FBC6B8 /* list.c in Sources */,
+				96B96B2D22A21E8700FBC6B8 /* bst.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
