@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		96B96B1622A1F83C00FBC6B8 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 96B96B1522A1F83C00FBC6B8 /* main.c */; };
+		96B96B2022A1F8C800FBC6B8 /* list.c in Sources */ = {isa = PBXBuildFile; fileRef = 96B96B1F22A1F8C800FBC6B8 /* list.c */; };
+		96B96B2922A1FBFD00FBC6B8 /* bigo.c in Sources */ = {isa = PBXBuildFile; fileRef = 96B96B2822A1FBFD00FBC6B8 /* bigo.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		96B96B1222A1F83C00FBC6B8 /* DataStructure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructure; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B96B1522A1F83C00FBC6B8 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		96B96B1E22A1F8C800FBC6B8 /* list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = list.h; sourceTree = "<group>"; };
+		96B96B1F22A1F8C800FBC6B8 /* list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = list.c; sourceTree = "<group>"; };
+		96B96B2722A1FBFD00FBC6B8 /* bigo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bigo.h; sourceTree = "<group>"; };
+		96B96B2822A1FBFD00FBC6B8 /* bigo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bigo.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +64,28 @@
 			isa = PBXGroup;
 			children = (
 				96B96B1522A1F83C00FBC6B8 /* main.c */,
+				96B96B2122A1FBA700FBC6B8 /* BigO */,
+				96B96B1D22A1F8BF00FBC6B8 /* LinkedList */,
 			);
 			path = DataStructure;
+			sourceTree = "<group>";
+		};
+		96B96B1D22A1F8BF00FBC6B8 /* LinkedList */ = {
+			isa = PBXGroup;
+			children = (
+				96B96B1E22A1F8C800FBC6B8 /* list.h */,
+				96B96B1F22A1F8C800FBC6B8 /* list.c */,
+			);
+			path = LinkedList;
+			sourceTree = "<group>";
+		};
+		96B96B2122A1FBA700FBC6B8 /* BigO */ = {
+			isa = PBXGroup;
+			children = (
+				96B96B2722A1FBFD00FBC6B8 /* bigo.h */,
+				96B96B2822A1FBFD00FBC6B8 /* bigo.c */,
+			);
+			path = BigO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				96B96B1622A1F83C00FBC6B8 /* main.c in Sources */,
+				96B96B2922A1FBFD00FBC6B8 /* bigo.c in Sources */,
+				96B96B2022A1F8C800FBC6B8 /* list.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
