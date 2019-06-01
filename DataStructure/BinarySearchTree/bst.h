@@ -27,12 +27,16 @@ void insert_bst(BST *self, int data);
 void delete_bst(BST *self, int data);
 
 BSTNodePtr find_bst(BST *self, int data);
-BSTNodePtr min_node(BSTNodePtr self);
+BSTNodePtr min_node_bst(BSTNodePtr self);
+BSTNodePtr max_node_bst(BSTNodePtr self);
 
 int height_bst(BST *self);
+int number_bst(BST *self);
 
 void print_pre_order_bst(BST *self);
 void print_in_order_bst(BST *self);
 void print_post_order_bst(BST *self);
+
+void destroy_bst(BST *self);
 
 #endif /* bst_h */

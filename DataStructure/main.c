@@ -7,40 +7,38 @@
 //
 
 #include <stdio.h>
-#include "bst.h"
+#include "avl.h"
 
-void print_height(BST *self) {
-    printf("height: %d\n", height_bst(self));
+void print_height(AVL *self) {
+    printf("height: %d\n", height_avl(self));
 }
 
-void insert(BST *self) {
+void insert(AVL *self) {
     printf("Enter some data to add: ");
     int data;
     scanf("%d", &data);
-    insert_bst(self, data);
+    insert_avl(self, data);
 }
 
-void delete(BST *self) {
+void delete(AVL *self) {
     printf("Enter some data to delete: ");
     int data;
     scanf("%d", &data);
-    delete_bst(self, data);
+    delete_avl(self, data);
 }
 
-void print(BST *self) {
-    print_pre_order_bst(self);
+void print(AVL *self) {
+    print_pre_order_avl(self);
     printf("\n");
-    print_in_order_bst(self);
+    print_in_order_avl(self);
     printf("\n");
-    print_post_order_bst(self);
+    print_post_order_avl(self);
     printf("\n");
 }
 
 int main(int argc, const char * argv[]) {
-    
-    printf("Week4!\n");
-    
-    BST tree = new_bst();
+        
+    AVL tree = new_avl();
     int quit = 0;
     int option;
     
