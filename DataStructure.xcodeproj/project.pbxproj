@@ -15,6 +15,7 @@
 		96B96B3522A2590300FBC6B8 /* hashtable.c in Sources */ = {isa = PBXBuildFile; fileRef = 96B96B3422A2590300FBC6B8 /* hashtable.c */; };
 		96B96B3922A2787400FBC6B8 /* heap.c in Sources */ = {isa = PBXBuildFile; fileRef = 96B96B3822A2787400FBC6B8 /* heap.c */; };
 		96B96B4122A3871700FBC6B8 /* sort.c in Sources */ = {isa = PBXBuildFile; fileRef = 96B96B4022A3871700FBC6B8 /* sort.c */; };
+		96B96B4522A3C1F000FBC6B8 /* dynamicprogramming.c in Sources */ = {isa = PBXBuildFile; fileRef = 96B96B4422A3C1F000FBC6B8 /* dynamicprogramming.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,8 @@
 		96B96B3822A2787400FBC6B8 /* heap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = heap.c; sourceTree = "<group>"; };
 		96B96B3F22A3871700FBC6B8 /* sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sort.h; sourceTree = "<group>"; };
 		96B96B4022A3871700FBC6B8 /* sort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sort.c; sourceTree = "<group>"; };
+		96B96B4322A3C1F000FBC6B8 /* dynamicprogramming.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dynamicprogramming.h; sourceTree = "<group>"; };
+		96B96B4422A3C1F000FBC6B8 /* dynamicprogramming.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = dynamicprogramming.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				96B96B1522A1F83C00FBC6B8 /* main.c */,
+				96B96B4222A3C1C900FBC6B8 /* DynamicProgramming */,
 				96B96B3E22A3871700FBC6B8 /* Sort */,
 				96B96B3622A2786500FBC6B8 /* Heap */,
 				96B96B3222A2589E00FBC6B8 /* HashTable */,
@@ -153,6 +157,15 @@
 			path = Sort;
 			sourceTree = "<group>";
 		};
+		96B96B4222A3C1C900FBC6B8 /* DynamicProgramming */ = {
+			isa = PBXGroup;
+			children = (
+				96B96B4322A3C1F000FBC6B8 /* dynamicprogramming.h */,
+				96B96B4422A3C1F000FBC6B8 /* dynamicprogramming.c */,
+			);
+			path = DynamicProgramming;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -209,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B96B4522A3C1F000FBC6B8 /* dynamicprogramming.c in Sources */,
 				96B96B1622A1F83C00FBC6B8 /* main.c in Sources */,
 				96B96B4122A3871700FBC6B8 /* sort.c in Sources */,
 				96B96B2922A1FBFD00FBC6B8 /* bigo.c in Sources */,
