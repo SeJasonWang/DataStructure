@@ -9,7 +9,7 @@
 #include "hashtable.h"
 #include <stdlib.h>
 
-HashTable create_hashtable(int n) {
+HashTable new_hashtable(int n) {
     HashTable newtable;
     
     newtable.table = malloc(sizeof *(newtable.table) * n);

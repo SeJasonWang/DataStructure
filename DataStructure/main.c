@@ -7,33 +7,15 @@
 //
 
 #include <stdio.h>
-#include "heap.h"
+#include "quicksort.h"
 
 int main() {
     
-    Heap heap = new_heap(9);
-
-    heap_insert(&heap, 0, 21);
-    heap_insert(&heap, 1, 13);
-    heap_insert(&heap, 2, 3);
-    heap_insert(&heap, 3, 1);
-    heap_insert(&heap, 4, 9);
-    heap_insert(&heap, 5, 11);
-    heap_insert(&heap, 6, 8);
-    heap_insert(&heap, 7, 7);
-    heap_insert(&heap, 8, 5);
+    Quicksort q = new_quicksort(9);
+    int a[9] = {21, 13, 3, 1, 9, 11, 8, 7, 5};
+    q.data = a;
     
-    print_heap(&heap);
-    
-    max_heap_sort(&heap);
-    
-    print_heap(&heap);
-
-    printf("%d->", max_heap_delete(&heap));
-    printf("%d->", max_heap_delete(&heap));
-    printf("%d\n", max_heap_delete(&heap));
-
-    print_heap(&heap);
-
+    sort(&q, 0);
+        
     return 0;
 }

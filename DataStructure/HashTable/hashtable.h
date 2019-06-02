@@ -17,7 +17,7 @@ typedef struct hashTable {
     List *table;
 } HashTable;
 
-HashTable create_hashtable(int n);
+HashTable new_hashtable(int n);
 
 void hash_insert(HashTable *self, int data);
 void hash_remove(HashTable *self, int data);
