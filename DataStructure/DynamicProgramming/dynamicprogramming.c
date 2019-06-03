@@ -11,22 +11,22 @@
 
 #define MAX(a, b)    ((a) > (b) ? (a) : (b))
 
-int simple_recursion(int weight[], int value[], int capacity, int n) { // Θ(2^n)
+int recursion_knapsackValue(int weight[], int value[], int capacity, int n) { // Θ(2^n)
     
     if (n == 0) {
         return 0;
     }
 
     if (weight[n-1] > capacity) {
-        return simple_recursion(weight, value, capacity, n-1);
+        return recursion_knapsackValue(weight, value, capacity, n-1);
     } else {
-        int value1 = value[n-1] + simple_recursion(weight, value, capacity - weight[n-1], n-1);
-        int value2 = simple_recursion(weight, value, capacity, n-1);
+        int value1 = value[n-1] + recursion_knapsackValue(weight, value, capacity - weight[n-1], n-1);
+        int value2 = recursion_knapsackValue(weight, value, capacity, n-1);
         return MAX(value1, value2);
     }
 }
 
-int dynamic_programming(int weight[], int value[], int capacity, int n) { // Θ(n * capacity)
+int dynamic_knapsackValue(int weight[], int value[], int capacity, int n) { // Θ(n * capacity)
 
     int *preResults = malloc(sizeof *(preResults) * (capacity+1));
     int *results = malloc(sizeof *(results) * (capacity+1));
@@ -60,4 +60,26 @@ int dynamic_programming(int weight[], int value[], int capacity, int n) { // Θ(
     free(results);
     
     return result;
+}
+
+int dynamic_subsequence(int value[], int n) {
+    
+    int *num = malloc(sizeof *(num) * n);
+    int max = 0;
+    for (int i = 0; i < n; i++) {
+        num[i] = 1;
+        int pre_max = 0;
+        for (int j = 0; j < i; j++) {
+            if (value[i] > value[j] & pre_max < value[j]) {
+                pre_max = num[j];
+            }
+        }
+        num[i] += pre_max;
+        if (num[i] > max) {
+            max = num[i];
+        }
+    }
+        
+    free(num);
+    return max;
 }

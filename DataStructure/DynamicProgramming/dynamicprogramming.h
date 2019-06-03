@@ -11,7 +11,9 @@
 
 #include <stdio.h>
 
-int simple_recursion(int weight[], int value[], int capacity, int n);
-int dynamic_programming(int weight[], int value[], int capacity, int n);
+int recursion_knapsackValue(int weight[], int value[], int capacity, int n);
+int dynamic_knapsackValue(int weight[], int value[], int capacity, int n);
+
+int dynamic_subsequence(int value[], int n);
 
 #endif /* dynamicprogramming_h */
