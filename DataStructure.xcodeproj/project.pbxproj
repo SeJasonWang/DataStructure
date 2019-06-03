@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		962CA16922A51F6600C7AFE2 /* skiplist.c in Sources */ = {isa = PBXBuildFile; fileRef = 962CA16822A51F6600C7AFE2 /* skiplist.c */; };
 		96B96B1622A1F83C00FBC6B8 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 96B96B1522A1F83C00FBC6B8 /* main.c */; };
 		96B96B2022A1F8C800FBC6B8 /* list.c in Sources */ = {isa = PBXBuildFile; fileRef = 96B96B1F22A1F8C800FBC6B8 /* list.c */; };
 		96B96B2922A1FBFD00FBC6B8 /* bigo.c in Sources */ = {isa = PBXBuildFile; fileRef = 96B96B2822A1FBFD00FBC6B8 /* bigo.c */; };
@@ -31,6 +32,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		962CA16722A51F6600C7AFE2 /* skiplist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = skiplist.h; sourceTree = "<group>"; };
+		962CA16822A51F6600C7AFE2 /* skiplist.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = skiplist.c; sourceTree = "<group>"; };
 		96B96B1222A1F83C00FBC6B8 /* DataStructure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructure; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B96B1522A1F83C00FBC6B8 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		96B96B1E22A1F8C800FBC6B8 /* list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = list.h; sourceTree = "<group>"; };
@@ -62,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		962CA16622A51F4800C7AFE2 /* SkipList */ = {
+			isa = PBXGroup;
+			children = (
+				962CA16722A51F6600C7AFE2 /* skiplist.h */,
+				962CA16822A51F6600C7AFE2 /* skiplist.c */,
+			);
+			path = SkipList;
+			sourceTree = "<group>";
+		};
 		96B96B0922A1F83C00FBC6B8 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				96B96B1522A1F83C00FBC6B8 /* main.c */,
+				962CA16622A51F4800C7AFE2 /* SkipList */,
 				96B96B4222A3C1C900FBC6B8 /* DynamicProgramming */,
 				96B96B3E22A3871700FBC6B8 /* Sort */,
 				96B96B3622A2786500FBC6B8 /* Heap */,
@@ -228,6 +241,7 @@
 				96B96B2922A1FBFD00FBC6B8 /* bigo.c in Sources */,
 				96B96B3522A2590300FBC6B8 /* hashtable.c in Sources */,
 				96B96B3922A2787400FBC6B8 /* heap.c in Sources */,
+				962CA16922A51F6600C7AFE2 /* skiplist.c in Sources */,
 				96B96B3122A2375200FBC6B8 /* avl.c in Sources */,
 				96B96B2022A1F8C800FBC6B8 /* list.c in Sources */,
 				96B96B2D22A21E8700FBC6B8 /* bst.c in Sources */,
