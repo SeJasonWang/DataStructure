@@ -8,25 +8,24 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "list.h"
+#include "bst.h"
 
 int main() {
     
-    List list = new_list();
+    BST bst = new_bst();
     
-    for (int i = 8; i >= 1; i--) {
-        insert_at_front(&list, i);
-    }
+    insert_bst(&bst, 7);
+    insert_bst(&bst, 2);
+    insert_bst(&bst, 8);
+    insert_bst(&bst, 1);
+    insert_bst(&bst, 3);
+    insert_bst(&bst, 14);
+    insert_bst(&bst, 5);
+    insert_bst(&bst, 12);
+
+    print_in_order_bst(&bst);
     
-    List unzipedList = unzip(&list);
-    
-    printf("original list: ");
-    print_list(&list);
-    printf("unzipped list: ");
-    print_list(&unzipedList);
-    
-    destroy_list(&list);
-    destroy_list(&unzipedList);
+    printf("\nfind %d\n", nearest_match(&bst, 0));
     
     return 0;
 

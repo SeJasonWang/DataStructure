@@ -46,6 +46,36 @@ BSTNodePtr find_bst(BST *self, int n) {
     return find_bst_node(self->root, n);
 }
 
+int nearest_match_node(BSTNodePtr self, int value) {
+    if (self != NULL) {
+        
+        if (value > self->data) {
+            int next_data = nearest_match_node(self->right, value);
+            if (next_data == 0) {
+                return self->data;
+            } else {
+                return (value - self->data) < abs(value - next_data) ? self->data : next_data;
+            }
+        } else if (value < self->data) {
+            int next_data = nearest_match_node(self->left, value);
+            if (next_data == 0) {
+                return self->data;
+            } else {
+                return (self->data - value) < abs(value - next_data) ? self->data : next_data;
+            }
+        } else {
+            return self->data;
+        }
+        
+    } else {
+        return 0;
+    }
+}
+
+int nearest_match(BST *bst, int value) {
+    return nearest_match_node(bst->root, value);
+}
+
 BSTNodePtr min_node_bst(BSTNodePtr self) {
     BSTNodePtr current = self;
     while (current->left != NULL) {

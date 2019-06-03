@@ -30,6 +30,7 @@ BSTNodePtr find_bst(BST *self, int data);
 BSTNodePtr min_node_bst(BSTNodePtr self);
 BSTNodePtr max_node_bst(BSTNodePtr self);
 
+int nearest_match(BST *bst, int value);
 int height_bst(BST *self);
 int number_bst(BST *self);
 
