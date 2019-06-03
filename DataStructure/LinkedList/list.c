@@ -74,6 +74,31 @@ void merge_list(List *self, List *addition) {
     printf("merged successfully:%d \n", addition->head->data);
 }
 
+List unzip(List *self) {
+    
+    List new_list;
+    new_list.head = NULL;
+    
+    ListNodePtr preview = NULL;
+    ListNodePtr current = self->head;
+    
+    while (current != NULL) {
+        
+        if (preview) {
+            preview->next = current->next;
+            
+            if (new_list.head == NULL) {
+                new_list.head = current;
+            }
+        }
+        
+        preview = current;
+        current = current->next;
+    }
+    
+    return new_list;
+}
+
 void print_list(List *self) {
     ListNodePtr current = self->head;
     while (current != NULL) {

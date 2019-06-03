@@ -8,41 +8,25 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "skiplist.h"
+#include "list.h"
 
 int main() {
     
-    SkipNodePtr found;
-    int arr[] = {5,7,1,12,8,14,9,4,10,2};
-    int level[] = {3,2,1,1,1,2,4,3,1,4};
-    int n = 10;
-    Skiplist list = new_skiplist();
+    List list = new_list();
     
-    printf("Insert:--------------------\n");
-    for (int i = 0; i < n; i++) {
-        skiplist_insert(&list, arr[i], level[i]);
-    }
-    skiplist_print(&list);
-    
-    found = skiplist_find(&list, 7);
-    if (found) {
-        printf("found %d\n", found->data);
-    } else {
-        printf("not found %d\n", 7);
+    for (int i = 8; i >= 1; i--) {
+        insert_at_front(&list, i);
     }
     
-    found = skiplist_find(&list, 3);
-    if (found) {
-        printf("found %d\n", found->data);
-    } else {
-        printf("not found %d\n", 3);
-    }
+    List unzipedList = unzip(&list);
     
-    skiplist_delete(&list, 3);
-    skiplist_delete(&list, 9);
-    skiplist_print(&list);
+    printf("original list: ");
+    print_list(&list);
+    printf("unzipped list: ");
+    print_list(&unzipedList);
     
-    skiplist_free(&list);
+    destroy_list(&list);
+    destroy_list(&unzipedList);
     
     return 0;
 
