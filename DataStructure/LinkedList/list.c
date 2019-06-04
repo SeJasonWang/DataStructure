@@ -99,6 +99,19 @@ List unzip(List *self) {
     return new_list;
 }
 
+int median(List *self) {
+
+    ListNodePtr median = self->head;
+    ListNodePtr current = self->head;
+    
+    while (current != NULL && current->next != NULL && current->next->next != NULL) {
+        median = median->next;
+        current = current->next->next;
+    }
+        
+    return median->data;
+}
+
 void print_list(List *self) {
     ListNodePtr current = self->head;
     while (current != NULL) {

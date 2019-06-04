@@ -27,7 +27,9 @@ void inset_in_order(List *self, int data);
 
 void reverse_list(List *self);
 void merge_list(List *self, List *addition);
+
 List unzip(List *self); // unzip even nodes from self to a new list
+int median(List *self); // the median value in a linked list
 
 void print_list(List *self);
 

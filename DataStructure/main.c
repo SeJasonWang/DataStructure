@@ -8,15 +8,20 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "bst.h"
+#include "list.h"
 
 int main() {
     
-    int a[7] = {1,2,3,4,5,6,7};
+    List list = new_list();
     
-    BST bst = arrayToBST(a, 0, 6);
-    
-    print_in_order_bst(&bst);
+    insert_at_front(&list, 6);
+    insert_at_front(&list, 5);
+    insert_at_front(&list, 4);
+    insert_at_front(&list, 3);
+    insert_at_front(&list, 2);
+    insert_at_front(&list, 1);
+
+    printf("%d\n", median(&list));
     
     return 0;
 
