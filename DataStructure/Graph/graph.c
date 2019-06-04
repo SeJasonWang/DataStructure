@@ -64,3 +64,27 @@ void dfs(Graph *self, int start) {
     
     dfs_graph(self, start, visited);
 }
+
+int inDegree(Graph *self, int v) {
+    int inDegree = 0;
+    for (int i = 0; i < self->V; i++) {
+        EdgeNodePtr current = self->edges[i].head;
+        while (current != NULL) {
+            if (current->to_vertex == v) {
+                inDegree++;
+            }
+            current = current->next;
+        }
+    }
+    return inDegree;
+}
+
+int outDegree(Graph *self, int v) {
+    int outDegree = 0;
+    EdgeNodePtr current = self->edges[v].head;
+    while (current != NULL) {
+        outDegree++;
+        current = current->next;
+    }
+    return outDegree;
+}

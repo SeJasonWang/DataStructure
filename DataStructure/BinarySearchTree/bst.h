@@ -23,6 +23,9 @@ typedef struct bst {
 
 BST new_bst(void);
 
+// takes a sorted array and returns a balanced  BST
+BST arrayToBST(int a[], int start, int last);
+
 void insert_bst(BST *self, int data);
 void delete_bst(BST *self, int data);
 

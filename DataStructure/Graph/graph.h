@@ -32,4 +32,7 @@ void print_graph(Graph *self);
 
 void dfs(Graph *self, int start);
 
+int inDegree(Graph *self, int v);
+int outDegree(Graph *self, int v);
+
 #endif /* graph_h */

@@ -15,6 +15,24 @@ BST new_bst() {
     return temp;
 }
 
+BSTNodePtr arrayToBST_node(int a[], int start, int last) {
+    if (start > last) {
+        return NULL;
+    }
+    int index = (start + last) / 2;
+    BSTNodePtr node = malloc(sizeof *(node));
+    node->data = a[index];
+    node->left = arrayToBST_node(a, start, index - 1);
+    node->right = arrayToBST_node(a, index + 1, last);
+    return node;
+}
+
+BST arrayToBST(int a[], int start, int last) {
+    BST bst = new_bst();
+    bst.root = arrayToBST_node(a, start, last);
+    return bst;
+}
+
 BSTNodePtr insert_bst_node(BSTNodePtr self, int n) {
     if (self == NULL) { /* found where to put it*/
         self = malloc(sizeof *self);

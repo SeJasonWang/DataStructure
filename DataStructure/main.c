@@ -8,32 +8,15 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "graph.h"
+#include "bst.h"
 
 int main() {
     
-    Graph graph = new_graph(9);
+    int a[7] = {1,2,3,4,5,6,7};
     
-    insert_at_front_edgelist(&graph.edges[0], 4);
-    insert_at_front_edgelist(&graph.edges[0], 3);
-    insert_at_front_edgelist(&graph.edges[0], 1);
-    insert_at_front_edgelist(&graph.edges[1], 5);
-    insert_at_front_edgelist(&graph.edges[1], 4);
-    insert_at_front_edgelist(&graph.edges[1], 2);
-    insert_at_front_edgelist(&graph.edges[2], 5);
-    insert_at_front_edgelist(&graph.edges[3], 7);
-    insert_at_front_edgelist(&graph.edges[3], 6);
-    insert_at_front_edgelist(&graph.edges[3], 4);
-    insert_at_front_edgelist(&graph.edges[4], 8);
-    insert_at_front_edgelist(&graph.edges[4], 7);
-    insert_at_front_edgelist(&graph.edges[4], 5);
-    insert_at_front_edgelist(&graph.edges[5], 8);
-    insert_at_front_edgelist(&graph.edges[6], 7);
-    insert_at_front_edgelist(&graph.edges[7], 8);
-
-    print_graph(&graph);
+    BST bst = arrayToBST(a, 0, 6);
     
-    dfs(&graph, 0);
+    print_in_order_bst(&bst);
     
     return 0;
 
