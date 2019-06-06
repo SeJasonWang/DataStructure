@@ -205,14 +205,17 @@ void print_post_order_bst_node(BSTNodePtr self) {
 
 void print_pre_order_bst(BST *self) {
     print_pre_order_bst_node(self->root);
+    printf("\n");
 }
 
 void print_in_order_bst(BST *self) {
     print_in_order_bst_node(self->root);
+    printf("\n");
 }
 
 void print_post_order_bst(BST *self) {
     print_post_order_bst_node(self->root);
+    printf("\n");
 }
 
 void free_bst_node(BSTNodePtr self) {

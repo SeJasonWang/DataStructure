@@ -63,6 +63,7 @@ void dfs(Graph *self, int start) {
     }
     
     dfs_graph(self, start, visited);
+    free(visited);
 }
 
 int inDegree(Graph *self, int v) {

@@ -65,13 +65,30 @@ void reverse_list(List *self) {
     }
 }
 
-void merge_list(List *self, List *addition) {
-    ListNodePtr current = self->head;
-    while (current->next != NULL) {
-        current = current->next;
+List zip(List *l1, List *l2) { // zip two lists together
+    
+    List new_list;
+    new_list.head = NULL;
+
+    ListNodePtr current_l1 = l1->head;
+    ListNodePtr current_l2 = l2->head;
+
+    while (current_l1 != NULL && current_l2 != NULL) {
+        if (new_list.head == NULL) {
+            new_list.head = current_l1;
+        }
+        
+        ListNodePtr temp_l1 = current_l1;
+        ListNodePtr temp_l2 = current_l2;
+        
+        current_l1 = current_l1->next;
+        current_l2 = current_l2->next;
+        
+        temp_l1->next = temp_l2;
+        temp_l2->next = current_l1;        
     }
-    current->next = addition->head;
-    printf("merged successfully:%d \n", addition->head->data);
+    
+    return new_list;
 }
 
 List unzip(List *self) {

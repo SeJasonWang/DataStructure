@@ -246,14 +246,18 @@ void print_post_order_avl_node(AVLNodePtr self) {
 
 void print_pre_order_avl(AVL *self) {
     print_pre_order_avl_node(self->root);
+    printf("\n");
 }
 
 void print_in_order_avl(AVL *self) {
     print_in_order_avl_node(self->root);
+    printf("\n");
+
 }
 
 void print_post_order_avl(AVL *self) {
     print_post_order_avl_node(self->root);
+    printf("\n");
 }
 
 void free_avl_node(AVLNodePtr self) {

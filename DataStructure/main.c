@@ -14,15 +14,26 @@ int main() {
     
     List list = new_list();
     
-    insert_at_front(&list, 6);
-    insert_at_front(&list, 5);
-    insert_at_front(&list, 4);
-    insert_at_front(&list, 3);
-    insert_at_front(&list, 2);
-    insert_at_front(&list, 1);
+    for (int i = 8; i >= 1; i--) {
+        insert_at_front(&list, i);
+    }
+    printf("original list: ");
+    print_list(&list);
 
-    printf("%d\n", median(&list));
+    List unzipedList = unzip(&list);
+    printf("original list: ");
+    print_list(&list);
+    printf("unzipped list: ");
+    print_list(&unzipedList);
     
-    return 0;
+    List zippedList = zip(&list, &unzipedList);
+    printf("zipped list: ");
+    print_list(&zippedList);
+    
+    destroy_list(&zippedList);
+    list.head = NULL;
+    unzipedList.head = NULL;
 
+    return 0;
+    
 }
