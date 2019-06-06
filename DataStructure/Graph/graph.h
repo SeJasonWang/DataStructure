@@ -31,6 +31,7 @@ void insert_at_front_edgelist(EdgeList *list, int to_vertex);
 void print_graph(Graph *self);
 
 void dfs(Graph *self, int start);
+void bfs(Graph *self, int start);
 
 int inDegree(Graph *self, int v);
 int outDegree(Graph *self, int v);

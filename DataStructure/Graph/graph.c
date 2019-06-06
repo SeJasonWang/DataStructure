@@ -8,6 +8,7 @@
 
 #include "graph.h"
 #include <stdlib.h>
+#include "queue.h"
 
 Graph new_graph(int n) {
     
@@ -43,14 +44,15 @@ void print_graph(Graph *self) {
     }
 }
 
-void dfs_graph(Graph *self, int start, int *visited) {
+void dfs_vertex(Graph *self, int start, int *visited) {
     if (visited[start] == 0) {
         visited[start] = 1;
         
         EdgeNodePtr current = self->edges[start].head;
         printf("current v: %d\n", start);
+        
         while (current != NULL) {
-            dfs_graph(self, current->to_vertex, visited);
+            dfs_vertex(self, current->to_vertex, visited);
             current = current->next;
         }
     }
@@ -62,8 +64,35 @@ void dfs(Graph *self, int start) {
         visited[i] = 0;
     }
     
-    dfs_graph(self, start, visited);
+    dfs_vertex(self, start, visited);
     free(visited);
+}
+
+void bfs_vertex(Graph *self, int start, Queue *queue, int *visited) {
+    if (start != -1) {
+        
+        EdgeNodePtr current = self->edges[start].head;
+        printf("current v: %d\n", start);
+
+        while (current != NULL) {
+            if (visited[current->to_vertex] == 0) {
+                visited[current->to_vertex] = 1;
+                enqueue(queue, current->to_vertex);
+            }
+            current = current->next;
+        }
+        bfs_vertex(self, dequeue(queue), queue, visited);
+    }
+}
+
+void bfs(Graph *self, int start) {
+    int *visited = malloc(sizeof *(visited) * self->V);
+    for (int i = 0; i < self->V; i++) {
+        visited[i] = (i == start) ? 1 : 0;
+    }
+    
+    Queue q = new_queue();
+    bfs_vertex(self, start, &q, visited);
 }
 
 int inDegree(Graph *self, int v) {

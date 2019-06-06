@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		962CA16922A51F6600C7AFE2 /* skiplist.c in Sources */ = {isa = PBXBuildFile; fileRef = 962CA16822A51F6600C7AFE2 /* skiplist.c */; };
 		962CA16D22A630DE00C7AFE2 /* graph.c in Sources */ = {isa = PBXBuildFile; fileRef = 962CA16C22A630DE00C7AFE2 /* graph.c */; };
+		96B4C5F822A94BF8005A7797 /* queue.c in Sources */ = {isa = PBXBuildFile; fileRef = 96B4C5F722A94BF8005A7797 /* queue.c */; };
 		96B96B1622A1F83C00FBC6B8 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 96B96B1522A1F83C00FBC6B8 /* main.c */; };
 		96B96B2022A1F8C800FBC6B8 /* list.c in Sources */ = {isa = PBXBuildFile; fileRef = 96B96B1F22A1F8C800FBC6B8 /* list.c */; };
 		96B96B2922A1FBFD00FBC6B8 /* bigo.c in Sources */ = {isa = PBXBuildFile; fileRef = 96B96B2822A1FBFD00FBC6B8 /* bigo.c */; };
@@ -37,6 +38,8 @@
 		962CA16822A51F6600C7AFE2 /* skiplist.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = skiplist.c; sourceTree = "<group>"; };
 		962CA16B22A630DE00C7AFE2 /* graph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = graph.h; sourceTree = "<group>"; };
 		962CA16C22A630DE00C7AFE2 /* graph.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = graph.c; sourceTree = "<group>"; };
+		96B4C5F622A94BF8005A7797 /* queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
+		96B4C5F722A94BF8005A7797 /* queue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = queue.c; sourceTree = "<group>"; };
 		96B96B1222A1F83C00FBC6B8 /* DataStructure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructure; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B96B1522A1F83C00FBC6B8 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		96B96B1E22A1F8C800FBC6B8 /* list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = list.h; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 			children = (
 				96B96B1E22A1F8C800FBC6B8 /* list.h */,
 				96B96B1F22A1F8C800FBC6B8 /* list.c */,
+				96B4C5F622A94BF8005A7797 /* queue.h */,
+				96B4C5F722A94BF8005A7797 /* queue.c */,
 			);
 			path = LinkedList;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 				96B96B3922A2787400FBC6B8 /* heap.c in Sources */,
 				962CA16922A51F6600C7AFE2 /* skiplist.c in Sources */,
 				96B96B3122A2375200FBC6B8 /* avl.c in Sources */,
+				96B4C5F822A94BF8005A7797 /* queue.c in Sources */,
 				96B96B2022A1F8C800FBC6B8 /* list.c in Sources */,
 				96B96B2D22A21E8700FBC6B8 /* bst.c in Sources */,
 			);
