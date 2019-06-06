@@ -8,32 +8,22 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "list.h"
+#include "bst.h"
 
 int main() {
     
-    List list = new_list();
-    
-    for (int i = 8; i >= 1; i--) {
-        insert_at_front(&list, i);
-    }
-    printf("original list: ");
-    print_list(&list);
+    BST bst = new_bst();
+    insert_bst(&bst, 6);
+    insert_bst(&bst, 2);
+    insert_bst(&bst, 8);
+    insert_bst(&bst, 1);
+    insert_bst(&bst, 3);
+    insert_bst(&bst, 11);
+    insert_bst(&bst, 5);
+    insert_bst(&bst, 9);
 
-    List unzipedList = unzip(&list);
-    printf("original list: ");
-    print_list(&list);
-    printf("unzipped list: ");
-    print_list(&unzipedList);
+    printf("%d\n", number_bst_oneChild(&bst));
     
-    List zippedList = zip(&list, &unzipedList);
-    printf("zipped list: ");
-    print_list(&zippedList);
-    
-    destroy_list(&zippedList);
-    list.head = NULL;
-    unzipedList.head = NULL;
-
     return 0;
     
 }

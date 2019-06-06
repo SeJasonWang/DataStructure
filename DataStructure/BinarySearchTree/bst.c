@@ -167,6 +167,21 @@ int number_bst(BST *self) {
     return number_bst_node(self->root);
 }
 
+int number_bst_oneChild_node(BSTNodePtr self) {
+    if (self == NULL) {
+        return 0;
+    }
+    int n = 0;
+    if ((self->left && self->right == NULL) || (self->left == NULL && self->right)) {
+        n++;
+    }
+    return n + number_bst_oneChild_node(self->left) + number_bst_oneChild_node(self->right);
+}
+
+int number_bst_oneChild(BST *self) {
+    return number_bst_oneChild_node(self->root);
+}
+
 void print_pre_order_bst_node(BSTNodePtr self) {
     if (self != NULL) {
         printf("(");

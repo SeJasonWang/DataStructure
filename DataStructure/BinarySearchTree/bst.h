@@ -36,6 +36,7 @@ BSTNodePtr max_node_bst(BSTNodePtr self);
 int nearest_match(BST *bst, int value);
 int height_bst(BST *self);
 int number_bst(BST *self);
+int number_bst_oneChild(BST *self);
 
 void print_pre_order_bst(BST *self);
 void print_in_order_bst(BST *self);
