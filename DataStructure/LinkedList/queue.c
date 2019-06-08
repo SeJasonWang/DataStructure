@@ -12,23 +12,22 @@
 Queue new_queue(void) {
     Queue temp;
     temp.head = NULL;
+    temp.tail = NULL;
     return temp;
 }
 
 void enqueue(Queue *self, int i) {
     QueueNodePtr new_node = malloc(sizeof *new_node);
     new_node->i = i;
+    new_node->next = NULL;
     
     if (self->head == NULL) {
         new_node->next = self->head;
         self->head = new_node;
+        self->tail = new_node;
     } else {
-        QueueNodePtr current = self->head;
-        while(current->next != NULL) {
-            current = current->next;
-        }
-        new_node->next = NULL;
-        current->next = new_node;
+        self->tail->next = new_node;
+        self->tail = new_node;
     }
 }
 
@@ -39,6 +38,10 @@ int dequeue(Queue *self) {
         
         self->head = current->next;
         free(current);
+        
+        if (self->head == NULL) {
+            self->tail = NULL;
+        }
         
         return i;
     } else {

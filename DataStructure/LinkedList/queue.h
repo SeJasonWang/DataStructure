@@ -18,6 +18,7 @@ typedef struct queueNode {
 
 typedef struct queue {
     QueueNodePtr head;
+    QueueNodePtr tail;
 } Queue;
 
 Queue new_queue(void);
